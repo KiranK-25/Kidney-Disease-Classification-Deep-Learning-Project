@@ -1,1 +1,1 @@
-# Kidney-Disease-MLFlow-DVC
+# Kidney-Disease-Classification-MLFlow-DVC
