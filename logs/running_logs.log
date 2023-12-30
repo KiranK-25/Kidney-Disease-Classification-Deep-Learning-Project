@@ -357,3 +357,115 @@ x==========x]
 [2023-12-30 15:47:15,333: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation completed <<<<<<
 
 x==========x]
+[2023-12-30 16:58:32,005: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.5:8080]
+[2023-12-30 16:58:32,006: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-30 17:02:05,217: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.5:8080]
+[2023-12-30 17:02:05,218: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-30 17:02:10,441: INFO: _internal: 127.0.0.1 - - [30/Dec/2023 17:02:10] "GET / HTTP/1.1" 200 -]
+[2023-12-30 17:02:36,291: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "E:\Data science\ML Pro\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 45, in predictRoute
+    result = clApp.classifier.predict()
+  File "e:\data science\ml pro\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\Prediction.py", line 15, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2023-12-30 17:02:36,309: INFO: _internal: 127.0.0.1 - - [30/Dec/2023 17:02:36] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2023-12-30 17:03:20,534: INFO: _internal: 127.0.0.1 - - [30/Dec/2023 17:03:20] "GET / HTTP/1.1" 200 -]
+[2023-12-30 17:03:27,232: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "E:\Data science\ML Pro\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 45, in predictRoute
+    result = clApp.classifier.predict()
+  File "e:\data science\ml pro\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\Prediction.py", line 15, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2023-12-30 17:03:27,236: INFO: _internal: 127.0.0.1 - - [30/Dec/2023 17:03:27] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2023-12-30 17:04:21,592: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.5:8080]
+[2023-12-30 17:04:21,593: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-30 17:04:21,776: INFO: _internal: 127.0.0.1 - - [30/Dec/2023 17:04:21] "GET / HTTP/1.1" 200 -]
+[2023-12-30 17:04:47,893: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "E:\Data science\ML Pro\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 45, in predictRoute
+    result = clApp.classifier.predict()
+  File "e:\data science\ml pro\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\Prediction.py", line 15, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Lenovo\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2023-12-30 17:04:47,900: INFO: _internal: 127.0.0.1 - - [30/Dec/2023 17:04:47] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2023-12-30 17:07:14,712: INFO: stage_04_model_evaluation: *******************]
+[2023-12-30 17:07:14,713: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation started <<<<<<]
+[2023-12-30 17:07:14,716: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-30 17:07:14,719: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-30 17:07:14,719: INFO: common: created directory at: artifacts]
+[2023-12-30 17:08:02,367: INFO: common: json file saved at: scores.json]
+[2023-12-30 17:08:02,367: INFO: common: json file saved at: scores.json]
+[2023-12-30 17:08:05,570: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2023-12-30 17:08:07,710: INFO: builder_impl: Assets written to: C:\Users\Lenovo\AppData\Local\Temp\tmp3gww8m1k\model\data\model\assets]
+[2023-12-30 17:08:25,256: INFO: dir_util: creating E:\Data science\ML Pro\Kidney-Disease-Classification-Deep-Learning-Project\mlruns\0\b6a78a9cd3f040d7901644072a1797f0\artifacts\model\data]
+[2023-12-30 17:08:25,256: INFO: dir_util: creating E:\Data science\ML Pro\Kidney-Disease-Classification-Deep-Learning-Project\mlruns\0\b6a78a9cd3f040d7901644072a1797f0\artifacts\model\data\model]
+[2023-12-30 17:08:25,256: INFO: dir_util: creating E:\Data science\ML Pro\Kidney-Disease-Classification-Deep-Learning-Project\mlruns\0\b6a78a9cd3f040d7901644072a1797f0\artifacts\model\data\model\assets]
+[2023-12-30 17:08:25,271: INFO: dir_util: creating E:\Data science\ML Pro\Kidney-Disease-Classification-Deep-Learning-Project\mlruns\0\b6a78a9cd3f040d7901644072a1797f0\artifacts\model\data\model\variables]
+[2023-12-30 17:08:25,553: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation completed <<<<<<
+
+x==========x]

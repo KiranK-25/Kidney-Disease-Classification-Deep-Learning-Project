@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/Data%20science/ML%20Pro/Kidney-Disease-Classification-Deep-Learning-Project/mlruns/0/b6a78a9cd3f040d7901644072a1797f0/artifacts
+end_time: 1703936305553
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b6a78a9cd3f040d7901644072a1797f0
+run_name: burly-bee-548
+run_uuid: b6a78a9cd3f040d7901644072a1797f0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703936282913
+status: 3
+tags: []
+user_id: Lenovo
